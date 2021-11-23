@@ -9,7 +9,7 @@ const command: GluegunCommand = {
 
     const id: string = cuid()
 
-    execSync(`echo ${id} | pbcopy`)
+    execSync(`printf "%s" ${id} | pbcopy`)
 
     print.info(`${id} copied to clipboard!`)
   }
